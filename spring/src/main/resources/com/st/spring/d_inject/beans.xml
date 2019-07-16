@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--    构造器注入-->
+    <bean id="person" class="com.st.spring.d_inject.constructor.Person">
+        <constructor-arg name="name" value="sunt"/>
+        <constructor-arg name="age" value="23"/>
+        <constructor-arg name="address" value="镇江"/>
+   </bean>
+    <!--setter方法注入    -->
+    <bean id="person1" class="com.st.spring.d_inject.setter.Person">
+        <property name="name" value="蔡徐坤"/>
+        <property name="age" value="27"/>
+        <property name="address" value="北京"/>
+    </bean>
+
+    <!--list    -->
+    <bean id="collectionBean" class="com.st.spring.d_inject.collection.CollectionBean">
+        <property name="list">
+            <list>
+                <value>蔡徐坤</value>
+                <value>王宝强</value>
+                <value>羽凡</value>
+            </list>
+        </property>
+        <!--数组  -->
+        <property name="array">
+            <list>
+                <value>马蓉</value>
+                <value>白百合</value>
+                <value>范冰冰</value>
+            </list>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="篮球" value="蔡徐坤"/>
+                <entry key="绿光" value="王宝强"/>
+            </map>
+        </property>
+        <property name="set">
+            <set>
+                <value>阿里巴巴</value>
+                <value>百度</value>
+                <value>腾讯</value>
+            </set>
+        </property>
+    </bean>
+
+
+</beans>
