@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:component-scan base-package="com.hand"/>
+
+
+    <!--Bean生命周期-->
+   <bean id="myBeanPostProcessor" class=""></bean>
+
+    <!--依赖注入-->
+    <bean id="person" class="com.hand.entity.Person">
+        <property name="name" value="小明"></property>
+        <property name="age" value="18"></property>
+        <property name="address" value="安信工"></property>
+    </bean>
+
+    <bean id="collection" class="com.hand.entity.Collections">
+        <property name="args">
+            <list>
+                <value>送到</value>
+                <value>地方</value>
+                <value>给</value>
+            </list>
+        </property>
+        <property name="list">
+            <list>
+                <value>对方</value>
+                <value>更多</value>
+                <value>二点</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="送到" value="大"></entry>
+                <entry key="地方" value="多"></entry>
+                <entry key="给" value="好"></entry>
+            </map>
+        </property>
+        <property name="set">
+            <set>
+                <value>安抚</value>
+                <value>反对</value>
+                <value>地方的</value>
+            </set>
+        </property>
+    </bean>
+</beans>
