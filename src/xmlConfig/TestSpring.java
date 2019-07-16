@@ -9,5 +9,6 @@ public class TestSpring {
         HelloSpring helloSpring = (HelloSpring) ac.getBean("helloSpring");
         helloSpring.setInfo("你好，Spring");
         System.out.println(helloSpring.getInfo());
+        helloSpring.helloDI();
     }
 }
